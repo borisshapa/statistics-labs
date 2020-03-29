@@ -13,8 +13,6 @@ Fn = 1 / n : 1 / n : 1;
 Fx = -1 : 1 / n : 1;
 F = unifcdf(Fx, x, y);
 [a, b] = stairs(v, Fn);
-a = [-1 a(1) a(1) a' 1];
-b = [0 0 b(1) b' 1];
 
 
 d = 1.36 / sqrt(n);
