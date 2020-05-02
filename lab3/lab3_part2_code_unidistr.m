@@ -2,16 +2,17 @@ pkg load statistics;
 clc;
 clear;
 
-E = 1;
-sigma = 1;
 n = 10^2;
 Fn = 1 / n : 1 / n : 1;
+x = -1;
+y = 1;
+Fx = -1 : 2 / n : 1;
 
 fprintf("Selection: %d\nI type error\n\n", n);
 for m = 100:100:1000
   fprintf("m = %d\n", m);
-  v = sort(normrnd(E, sigma, n, m));
-  F = normcdf(v, E, sigma);
+  v = sort(unifrnd(x, y, n, m));
+  F = unifcdf(v, x, y);
   diff = F - Fn';
   sup = max(max(abs(diff), abs(diff - 1 / n)));
   kolmogorov = sqrt(n) * sup;
@@ -22,12 +23,12 @@ for m = 100:100:1000
   fprintf("Kolmogorov: %d\nSmirnov: %d\n\n", k, s);
 endfor
 
-fprintf("===================================\n\n")
+fprintf("===================================\n")
 fprintf("Selection: %d\nII type error\n\n", n);
-v = sort(normrnd(E, sigma, n, m));
+v = sort(unifrnd(x, y, n, m));
 for a = 0:0.01:0.1
   fprintf("addition = %d\n", a);
-  F = normcdf(v, E, sigma + a);
+  F = unifcdf(v, x + 3 * a, y + 3 * a);
   diff = F - Fn';
   sup = max(max(abs(diff), abs(diff - 1 / n)));
   kolmogorov = sqrt(n) * sup;
@@ -42,12 +43,12 @@ n = 10^4;
 Fn = 1 / n : 1 / n : 1;
 
 fprintf("===================================\n")
-fprintf("===================================\n\n")
+fprintf("===================================\n")
 fprintf("Selection: %d\nI type error\n\n", n);
 for m = 100:100:1000
   fprintf("m = %d\n", m);
-  v = sort(normrnd(E, sigma, n, m));
-  F = normcdf(v, E, sigma);
+  v = sort(unifrnd(x, y, n, m));
+  F = unifcdf(v, x, y);
   diff = F - Fn';
   sup = max(max(abs(diff), abs(diff - 1 / n)));
   kolmogorov = sqrt(n) * sup;
@@ -58,12 +59,12 @@ for m = 100:100:1000
   fprintf("Kolmogorov: %d\nSmirnov: %d\n\n", k, s);
 endfor
 
-fprintf("===================================\n\n")
-fprintf("Selection: %d\nII type error\n", n);
-v = sort(normrnd(E, sigma, n, m));
-for a = 0:0.01:0.1
+fprintf("===================================\n")
+fprintf("Selection: %d\nII type error\n\n", n);
+v = sort(unifrnd(x, y, n, m));
+for a = 0:0.001:0.01
   fprintf("addition = %d\n", a);
-  F = normcdf(v, E, sigma + a);
+  F = unifcdf(v, x + a, y + a);
   diff = F - Fn';
   sup = max(max(abs(diff), abs(diff - 1 / n)));
   kolmogorov = sqrt(n) * sup;

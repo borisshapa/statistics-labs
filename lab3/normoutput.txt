@@ -1,0 +1,185 @@
+Selection: 10000
+I type error
+
+m = 100
+Kolmogorov: 0.09
+Smirnov: 0.07
+
+m = 200
+Kolmogorov: 0.03
+Smirnov: 0.025
+
+m = 300
+Kolmogorov: 0.0466667
+Smirnov: 0.0566667
+
+m = 400
+Kolmogorov: 0.055
+Smirnov: 0.0725
+
+m = 500
+Kolmogorov: 0.034
+Smirnov: 0.034
+
+m = 600
+Kolmogorov: 0.0433333
+Smirnov: 0.0516667
+
+m = 700
+Kolmogorov: 0.0557143
+Smirnov: 0.0414286
+
+m = 800
+Kolmogorov: 0.0425
+Smirnov: 0.035
+
+m = 900
+Kolmogorov: 0.0588889
+Smirnov: 0.0633333
+
+m = 1000
+Kolmogorov: 0.041
+Smirnov: 0.041
+
+===================================
+
+Selection: 100
+II type error
+
+addition = 0
+Kolmogorov: 0.945
+Smirnov: 0.948
+
+addition = 0.01
+Kolmogorov: 0.944
+Smirnov: 0.95
+
+addition = 0.02
+Kolmogorov: 0.947
+Smirnov: 0.95
+
+addition = 0.03
+Kolmogorov: 0.946
+Smirnov: 0.949
+
+addition = 0.04
+Kolmogorov: 0.941
+Smirnov: 0.95
+
+addition = 0.05
+Kolmogorov: 0.943
+Smirnov: 0.948
+
+addition = 0.06
+Kolmogorov: 0.942
+Smirnov: 0.949
+
+addition = 0.07
+Kolmogorov: 0.941
+Smirnov: 0.95
+
+addition = 0.08
+Kolmogorov: 0.937
+Smirnov: 0.947
+
+addition = 0.09
+Kolmogorov: 0.937
+Smirnov: 0.949
+
+addition = 0.1
+Kolmogorov: 0.934
+Smirnov: 0.947
+
+===================================
+===================================
+
+Selection: 1000000
+I type error
+
+m = 100
+Kolmogorov: 0.07
+Smirnov: 0.05
+
+m = 200
+Kolmogorov: 0.045
+Smirnov: 0.045
+
+m = 300
+Kolmogorov: 0.06
+Smirnov: 0.0666667
+
+m = 400
+Kolmogorov: 0.045
+Smirnov: 0.0375
+
+m = 500
+Kolmogorov: 0.04
+Smirnov: 0.038
+
+m = 600
+Kolmogorov: 0.07
+Smirnov: 0.0666667
+
+m = 700
+Kolmogorov: 0.04
+Smirnov: 0.0342857
+
+m = 800
+Kolmogorov: 0.04125
+Smirnov: 0.04125
+
+m = 900
+Kolmogorov: 0.0477778
+Smirnov: 0.05
+
+m = 1000
+Kolmogorov: 0.043
+Smirnov: 0.04
+
+===================================
+
+Selection: 10000
+II type error
+addition = 0
+Kolmogorov: 0.951
+Smirnov: 0.956
+
+addition = 0.01
+Kolmogorov: 0.924
+Smirnov: 0.937
+
+addition = 0.02
+Kolmogorov: 0.849
+Smirnov: 0.857
+
+addition = 0.03
+Kolmogorov: 0.667
+Smirnov: 0.62
+
+addition = 0.04
+Kolmogorov: 0.36
+Smirnov: 0.244
+
+addition = 0.05
+Kolmogorov: 0.104
+Smirnov: 0.045
+
+addition = 0.06
+Kolmogorov: 0.012
+Smirnov: 0.001
+
+addition = 0.07
+Kolmogorov: 0.001
+Smirnov: 0
+
+addition = 0.08
+Kolmogorov: 0
+Smirnov: 0
+
+addition = 0.09
+Kolmogorov: 0
+Smirnov: 0
+
+addition = 0.1
+Kolmogorov: 0
+Smirnov: 0

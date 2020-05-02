@@ -19,4 +19,4 @@ d = 1.36 / sqrt(n);
 
 b1 = max(0, b - d);
 b2 = min(1, b + d);
-plot(a, b, FF, F, a, b1, a, b2), grid;
+plot(a, b, Fx, F, a, b1, a, b2), grid;
