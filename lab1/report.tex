@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath}
+\usepackage{hyperref} 
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{fancybox,fancyhdr}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[left=2.5cm,right=2.5cm,
+  top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\title{Home work}
+\date{2019-5-5}
+\author{Boris Shaposhnikov}
+\linespread{1.3}
+\pagestyle{fancy}
+\fancyhead[C]{Домашняя работа}
+\fancyhead[L]{Борис Шапошников М3139}
+\fancyhead[R]{Неделя 10}
+\fancyfoot[C]{Страница \thepage}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\definecolor{linkcolor}{HTML}{0000FF}
+\definecolor{urlcolor}{HTML}{0000FF}
+ \hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+\begin{document}
+\large
+  \newpage
+  \section*{Задача 1}
+    Мы умеем прибавлять число на отрезке за $O(n + m)$. Посчитаем последовательность $b_0 = a_0, \forall i \geq 1: b_i = a_i - a_{i - 1}$. Прибавить $v$ на $[l, r]$ — $b_l \mathrel{+}= v$ и $b_{r + 1} \mathrel{-}= v$. Посчитав префиксные суммы, получим изменённый массив $a_i$.
+    \newline
+    Для каждого запроса $(k, x, l, r)$ прибавим $x$ на отрезке $[l, r]$. Перепосчитаем $b_i$. Прибавление $k * (i - l) \; \forall i \in [l, r]$ — прибавление $k$ на отрезке $[l, r]$ в массиве b (это мы умеем) и нужно из $b_{r + 1}$ вычесть $k * (r - l)$. Итого $O(n + m)$.
+   \section*{Задача 2}
+    Построим link-cut tree (на каждом пути splay дерево) ($O(log(n)$). Для запроса найдём LCA двух вершин (например, методом двоичных подъёмов за $<O(n log(n)), O(log(n))>$ или с помощью того же link-cut tree).
+    Выполним операцию expose ($O(log(n))$) и удалим ребро из пути, которое ведёт из LCA вниз, если такое существует. Найдём ответ в дереве для полученного пути. В splay дереве (ключ — номер первого вхождения вершины в Эйлеровом обходе) в каждой вершине будем дополнительно поддерживать помеченность и номер самой правой непомеченной вершины (см функцию в "Задача 3"). Ответ лежит в корне дерева. 
+    \section*{Задача 3}
+    Задача не сильно отличается от предыдущей, если мы умеем пересчитывать самую правую непомеченную вершину $x$ через сыновей поднимаясь по дереву до корня (для каждой вершины в исходном дереве храним указатель на вершину в splay или номер в Эйлеровом обходе) за $O(log(n))$: 
+    \begin{verbatim}
+      if (vert.right.x != null)
+          vert.x = vert.right.x;
+      else if (!vert.mark)
+          vert.x = vert.number;
+      else
+          vert.x = vert.left.x;
+    \end{verbatim}
+    Итого $<O(n log(n)), O(log(n))>$.
+\end{document}
